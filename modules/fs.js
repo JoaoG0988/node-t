@@ -10,7 +10,7 @@ fs.mkdir(path.join(__dirname, '/teste'),(error) => {
         console.log("Erro",error)
     }
 
-    console.log("Pasta criada com sucesso.")
+    console.log("Pasta criada com sucesso.");
 });
 
 
@@ -22,19 +22,33 @@ fs.writeFile(path.join(__dirname,'/teste','teste.html'),'hello Node!',(error)=>{
     }
 
     console.log("Arquivo criado com sucesso!");
+
+    // Adiconar a um conteúdo de um aquivo
+
+    fs.appendFile(path.join(__dirname,'/teste','teste.html'),'Hello World!',(error)=>{
+        if(error){
+            return console.log("Erro: ", error)
+        }
+    
+        console.log("Arquivo modificado com sucesso!");
+    });
+
+    // Ler arquivo
+
+    fs.readFile(path.join(__dirname,'/teste','teste.html'),'utf8',(error,data)=>{
+        if(error){
+            return console.log("Erro: ",error)
+        }
+    
+        console.log(data);
+    });
 });
 
 
-// Adiconar a um conteúdo de um aquivo
 
-fs.appendFile(path.join(__dirname,'/teste','teste.html'),'Hello World!',(error)=>{
-    if(error){
-        return console.log("Erro: ", error)
-    }
 
-    console.log("Arquivo modificado com sucesso!")
-});
 
-//
+
+
 
 
