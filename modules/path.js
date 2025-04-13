@@ -1,3 +1,6 @@
+// Módulo PATH --> Interação com diretórios e arquivos
+
+
 const path = require('path');
 
 // Basename
@@ -11,3 +14,6 @@ console.log(path.extname(__filename)); // .js
 
 // Criar ogjeto Path
 console.log(path.parse(__filename)); // { root: '/', dir: '/home/andre/Documentos/Projetos/NodeJS/modules', base: 'path.js', ext: '.js', name: 'path' }
+
+// Juntar caminhos de arquivos
+console.log(path.join(__dirname,"teste","teste.html")); 
