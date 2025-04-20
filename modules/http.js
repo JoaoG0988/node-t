@@ -25,4 +25,4 @@ const server = http.createServer((req,res) => {
     }
 });
 
-server.listen(port, () => console.log(`Rodando na porta ${port}!`));
+server.listen(port, () => console.log(`Rodando http na porta ${port}!`));
