@@ -1,8 +1,6 @@
 
 // Módulo File System (fs) - Módulo nativo do Node.js para manipulação de arquivos e pastas
 
-
-
 const fs = require('fs');
 const path = require('path');
 
@@ -18,7 +16,7 @@ fs.mkdir(path.join(__dirname, '/teste'),(error) => {
 });
 
 
-// Criar um arquivo --> Um writefile sobscreve o outro, vamos usar outro metodo para adicionar arquivos
+// Criar um arquivo --> Um writefile sobscreve o outro, usar outro metodo para adicionar arquivos
 
 fs.writeFile(path.join(__dirname,'/teste','teste.html'),'hello Node!',(error)=>{
     if(error){
@@ -33,7 +31,7 @@ fs.writeFile(path.join(__dirname,'/teste','teste.html'),'hello Node!',(error)=>{
         if(error){
             return console.log("Erro: ", error)
         }
-    
+
         console.log("Arquivo modificado com sucesso!");
     });
 
@@ -43,7 +41,7 @@ fs.writeFile(path.join(__dirname,'/teste','teste.html'),'hello Node!',(error)=>{
         if(error){
             return console.log("Erro: ",error)
         }
-    
+
         console.log(data);
     });
 });

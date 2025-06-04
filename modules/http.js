@@ -1,4 +1,5 @@
-const http = require('http');
+const http = require('http'); // Importando o módulo http nativo do Node.js para criar um servidor HTTP
+// O módulo http permite que você crie um servidor web, manipule requisições e respostas HTTP, e muito mais.
 
 const port = 8080;
 
@@ -21,7 +22,7 @@ const server = http.createServer((req,res) => {
         ];
 
         res.writeHead(200,{"Content-Type":"application/json"}); // Enviando um JSON
-        res.end(JSON.stringify(users));
+        res.end(JSON.stringify(users));//strinfy: converte o objeto JavaScript em uma string JSON
     }
 });
 

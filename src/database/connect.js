@@ -1,4 +1,4 @@
-const mongoose = require("mongoose"); // Importando o mongoose
+const mongoose = require("mongoose"); // Importando o mongoose, que é uma biblioteca do Node.js para modelar dados e interagir com o MongoDB.
 
 const connectToDatabase = async () => {
   try {
